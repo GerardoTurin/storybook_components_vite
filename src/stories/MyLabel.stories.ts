@@ -61,3 +61,13 @@ export const CustomColor: Story = {
 };
 
 
+export const CustomBackground: Story = {
+    args: {
+        label: 'Custom Background Label',
+        size: 'h4',
+        fontColor: 'white',
+        backgroundColor: 'black'
+    }
+};
+
+

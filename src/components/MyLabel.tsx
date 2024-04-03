@@ -31,12 +31,21 @@ interface MyLabelProps {
     * The color of the text
     */
     fontColor?: string;
+
+
+    backgroundColor?: string;
 }
 
 
-const MyLabel = ( { label, size = 'normal', allCaps = true, color = 'text-primary', fontColor = 'red' }: MyLabelProps ) => {
+const MyLabel = ({ 
+        label, 
+        size = 'normal', 
+        allCaps = true, color = 'text-primary', 
+        fontColor = 'red',
+        backgroundColor = 'white'
+    }: MyLabelProps ) => {
     return (
-        <span className={`${size} ${color}`} style={{ color: fontColor }}>
+        <span className={`${size} ${color}`} style={{ color: fontColor, backgroundColor }}>
             { allCaps ? label.toUpperCase() : label }
         </span>
     )
